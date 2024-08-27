@@ -1,0 +1,7 @@
+@port = 5116
+@api_url = http://localhost:{{port}}
+
+GET {{api_url}}/test
+Accept: application/json
+
+###
