@@ -6,8 +6,8 @@ The Backer Project is a web application designed for smart task management and s
 - **Scalability:** Ensures the system can grow and adapt to increased workload and complexity without compromising performance.
 - **Modularity and Separation of Concerns:** Promotes maintainability by organizing the codebase into distinct, loosely coupled modules, each responsible for a specific concern.
 
-<div style="text-align: center;">
-  <img src="https://firebasestorage.googleapis.com/v0/b/backer-bb647.appspot.com/o/Untitled-2024-06-24-1621.png?alt=media&token=0a0b9f02-b613-4ffd-bab5-7d5fcc791dad" alt="Backer Project Diagram" style="width: 60%;">
+<div style="margin: 3rem auto; max-width: 500px;">
+  <img src="https://firebasestorage.googleapis.com/v0/b/backer-bb647.appspot.com/o/Untitled-2024-06-24-1621.png?alt=media&token=0a0b9f02-b613-4ffd-bab5-7d5fcc791dad" alt="Backer Project Diagram">
 </div>
 
 ## Key Technologies
