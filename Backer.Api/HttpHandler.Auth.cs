@@ -1,21 +1,44 @@
-
+using Backer.Application.Services.Authentication;
 using Backer.Contracts.Authentication;
 
 namespace Backer.Api.Handlers;
 
 public static class HttpHandlerAuth
 {
-    public static void MapAuthEndpoints(this IEndpointRouteBuilder app)
+    public static void MapAuthEndpoints(this IEndpointRouteBuilder endpoints)
     {
-        app.MapPost("/auth/register", (RegisterRequest req) =>
+        endpoints.MapPost("/auth/register", (RegisterRequest req, IAuthenticationService authenticationService) =>
         {
-            return Results.Ok(req);
+            var authResult = authenticationService.Register(
+                req.Email,
+                req.Password,
+                req.FirstName,
+                req.LastName);
+            var response = new AuthenticationResponse(
+                authResult.Id,
+                authResult.Email,
+                authResult.FirstName,
+                authResult.LastName,
+                authResult.Token
+            );
+            return Results.Ok(response);
         });
 
-        app.MapPost("/auth/login", (LoginRequest request) =>
+        endpoints.MapPost("/auth/login", (LoginRequest req, IAuthenticationService authenticationService) =>
         {
-            // Simulate login logic
-            return Results.Ok(request);
+            var authResult = authenticationService.Login(
+                req.Email,
+                req.Password);
+
+            var response = new AuthenticationResponse(
+                authResult.Id,
+                authResult.Email,
+                authResult.FirstName,
+                authResult.LastName,
+                authResult.Token
+            );
+            return Results.Ok(response);
         });
     }
 }
+

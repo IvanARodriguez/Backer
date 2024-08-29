@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Backer.Contracts\Backer.Contracts.csproj" />
+    <ProjectReference Include="..\Backer.Application\Backer.Application.csproj" />
   </ItemGroup>
 
 </Project>

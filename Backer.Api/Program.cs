@@ -1,5 +1,6 @@
 using Backer.Api.Handlers;
 using Backer.Api.Middleware;
+using Backer.Application.Services.Authentication;
 
 var builder = WebApplication.CreateBuilder(args);
 {
@@ -10,6 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
     logger.CombineLogs = true;
   });
   builder.Services.AddSwaggerGen();
+  builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 }
 
 var app = builder.Build();

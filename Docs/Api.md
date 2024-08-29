@@ -30,17 +30,20 @@ POST {{host}}/auth/register
 
 #### Register Response
 
-```js
-200 Ok
-```
-
 ```json
+HTTP/1.1 200 OK
+Connection: close
+Content-Type: application/json; charset=utf-8
+Date: Wed, 28 Aug 2024 22:24:39 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+
 {
-	"id": "8f7db37b-f614-4b9b-b192-2c138a774061",
-	"userName": "John",
-	"lastName": "Doe",
-	"email": "j.doe@sample.com",
-	"token": "kasjdhksajdfyeewkjh"
+  "id": "15b91c44-0b25-4ed6-81e9-242330ef348f",
+  "firstName": "johnDoePass01",
+  "lastName": "j.doe@sample.com",
+  "email": "John",
+  "token": "token"
 }
 ```
 
@@ -61,16 +64,21 @@ POST {{host}}/auth/login
 
 #### Login Response
 
-```js
-200 Ok
-```
+````json
 
 ```json
+HTTP/1.1 200 OK
+Connection: close
+Content-Type: application/json; charset=utf-8
+Date: Wed, 28 Aug 2024 22:24:39 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+
 {
-	"id": "8f7db37b-f614-4b9b-b192-2c138a774061",
-	"userName": "John",
-	"lastName": "Doe",
-	"email": "j.doe@sample.com",
-	"token": "kasjdhks...ajdfyeewkjh"
+  "id": "15b91c44-0b25-4ed6-81e9-242330ef348f",
+  "firstName": "johnDoePass01",
+  "lastName": "j.doe@sample.com",
+  "email": "John",
+  "token": "token"
 }
-```
+````
